@@ -1,0 +1,35 @@
+{
+  "name": "trust-fund-api",
+  "version": "1.0.0",
+  "description": "Trust Fund API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/am-tech/trust-fund-api.git"
+  },
+  "keywords": [
+    "trust",
+    "fund",
+    "api",
+    "money"
+  ],
+  "author": "AM Tech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/am-tech/trust-fund-api/issues"
+  },
+  "homepage": "https://github.com/am-tech/trust-fund-api#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^7.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
