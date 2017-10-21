@@ -1,6 +1,7 @@
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 
+const errors = require('./middlewares/errors');
 const routes = require('./routes');
 
 const PORT = process.env.PORT || 3000;
@@ -12,6 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.use(bodyParser());
+app.use(errors());
 
 routes(app);
 
