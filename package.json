@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/am-tech/trust-fund-api#readme",
   "dependencies": {
+    "amazon-product-api": "^0.4.4",
     "dotenv": "^4.0.0",
     "joi": "^13.0.1",
     "koa": "^2.3.0",
