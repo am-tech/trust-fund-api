@@ -33,5 +33,17 @@ module.exports = (sequelize, DataTypes) => {
     })
   };
 
+  Campaigns.browseAll = function () {
+    return this.findAll({
+      include: [
+        {
+          attributes: [ 'imageUrl' ],
+          model: sequelize.models.Items,
+          as: 'items'
+        },
+      ],
+    });
+  };
+
   return Campaigns;
 };

@@ -10,7 +10,7 @@ const router = require('koa-router')({
 });
 
 router.get('/browse', async (context) => {
-  const campaigns = await Campaigns.findAll();
+  const campaigns = await Campaigns.browseAll();
 
   context.body = campaigns;
 });
