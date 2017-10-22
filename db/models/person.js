@@ -31,5 +31,13 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  Persons.findByUsername = function (username) {
+    return this.find({
+      where: {
+        email: username.toLowerCase(),
+      },
+    });
+  };
+
   return Persons;
 };
