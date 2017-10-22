@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = new Koa();
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production' && process.env.REQUEST_LOGGING === 'true') {
   app.use(require('koa-morgan')('combined'));
 }
 

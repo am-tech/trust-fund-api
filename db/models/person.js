@@ -1,5 +1,3 @@
-const Campaigns = require('./campaign');
-
 module.exports = (sequelize, DataTypes) => {
   const Persons = sequelize.define('Persons', {
     id: {
@@ -26,8 +24,8 @@ module.exports = (sequelize, DataTypes) => {
         id,
       },
       include: [
-        { model: sequelize.models.Campaigns, as: 'campaigns' }
-      ]
+        { model: sequelize.models.Campaigns, as: 'campaigns' },
+      ],
     });
   };
 

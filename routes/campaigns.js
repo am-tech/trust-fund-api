@@ -16,16 +16,16 @@ router.get('/browse', async (context) => {
 });
 
 router.get(
-  '/:id',
+  '/:campaignId',
   validate({
     params: Joi.object().keys({
-      id: Joi.string().guid(),
+      campaignId: Joi.string().guid(),
     }),
   }),
   async (context) => {
-    const { id } = context.params;
+    const { campaignId } = context.params;
 
-    const campaign = await Campaigns.findById(id);
+    const campaign = await Campaigns.findById(campaignId);
 
     if (!campaign) {
       context.throw(404);
@@ -35,7 +35,7 @@ router.get(
   }
 );
 
-router.use('/:id', pledges.routes());
-router.use('/:id', items.routes());
+router.use('/:campaignId', pledges.routes());
+router.use('/:campaignId', items.routes());
 
 module.exports = router;
