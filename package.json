@@ -4,7 +4,8 @@
   "description": "Trust Fund API",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "db:upgrade": "sequelize db:migrate && sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
