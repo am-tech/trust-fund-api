@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     campaignId: DataTypes.UUID,
     name: DataTypes.STRING,
+    imageUrl: DataTypes.TEXT,
   }, {
     tableName: 'items',
   });

@@ -35,6 +35,7 @@ module.exports = {
         id: itemOneId,
         campaignId: campaignOneId,
         name: 'Red Shoes',
+        imageUrl: 'https://placeimg.com/100/100/tech',
       },
     ]);
 
